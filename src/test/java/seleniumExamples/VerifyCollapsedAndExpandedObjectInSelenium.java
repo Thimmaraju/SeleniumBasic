@@ -16,10 +16,13 @@ public class VerifyCollapsedAndExpandedObjectInSelenium {
 	@Test
 	public void verifyCollapsedAndExpandedObjectInSelenium() throws InterruptedException {
 		// for Mac OS
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
 		// For Window OS
 		// System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")
 		// + "/drivers/chromedriver.exe");
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\WinWire\\eclipse-workspace\\Selenium_basics\\Drivers\\chromedriver.exe");
+		
 		driver = new ChromeDriver();
 		driver.get("http://www.hdfcbank.com/htdocs/nri_banking/payments/BillPay/BillPay.htm");
 		String style = driver.findElement(By.xpath(".//*[@id='nre_savings_acc']/ul/li[2]/h3")).getCssValue("background-image");

@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,7 +29,9 @@ public class Series2 {
 	 */
 
 	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new FirefoxDriver();
+		
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\WinWire\\git\\seleniumBasic\\drivers\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 		WebDriverWait wait = new WebDriverWait(driver, 60);
